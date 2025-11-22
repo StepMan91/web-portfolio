@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, Cpu, Plane, Utensils, Zap } from "lucide-react";
+import Scene3D from "@/components/Scene3D";
 
 export default function Home() {
   return (
@@ -100,6 +101,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* 3D Showcase Section */}
+      <Scene3D />
     </div>
   );
 }
