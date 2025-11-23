@@ -7,11 +7,35 @@ import { motion } from "framer-motion";
 import { Suspense } from "react";
 
 const models = [
-    { id: 1, path: "/3D_models/model (1).glb", name: "Robotics", scale: 0.8 },
-    { id: 2, path: "/3D_models/model (2).glb", name: "Drone Tech", scale: 0.8 },
-    { id: 3, path: "/3D_models/model (3).glb", name: "Components", scale: 0.8 },
-    { id: 4, path: "procedural", name: "Future Tech", scale: 1.2 },
-];
+    {
+        id: 1,
+        path: "/3D_models/quantum.glb",
+        type: "quantum",
+        name: "Quantum Computing",
+        scale: 0.8
+    },
+    {
+        id: 2,
+        path: "/3D_models/drone.glb",
+        type: "drone",
+        name: "Drone Tech",
+        scale: 0.8
+    },
+    {
+        id: 3,
+        path: "/3D_models/rpi.glb",
+        type: "pi",
+        name: "Embedded Systems",
+        scale: 0.8
+    },
+    {
+        id: 4,
+        path: "/3D_models/robot.glb",
+        type: "robot",
+        name: "Humanoid Robotics",
+        scale: 1.2
+    },
+] as const;
 
 export default function Scene3D() {
     return (
@@ -49,7 +73,11 @@ export default function Scene3D() {
                             <Canvas shadows dpr={[1, 2]} camera={{ fov: 50 }}>
                                 <Suspense fallback={null}>
                                     <Stage environment="city" intensity={0.6} adjustCamera={false}>
-                                        <ModelViewer modelPath={model.path} scale={model.scale} />
+                                        <ModelViewer
+                                            modelPath={model.path}
+                                            type={model.type}
+                                            scale={model.scale}
+                                        />
                                     </Stage>
                                     <OrbitControls autoRotate autoRotateSpeed={4} enableZoom={false} />
                                 </Suspense>

@@ -66,23 +66,37 @@ export default function ContactPage() {
                                 <Mail className="h-6 w-6 text-primary mt-1" />
                                 <div>
                                     <h3 className="font-medium">Email</h3>
-                                    <p className="text-muted-foreground">contact@example.com</p>
+                                    <p className="text-muted-foreground">bastien.caspani@gmail.com</p>
                                 </div>
                             </div>
                             <div className="flex items-start space-x-4">
                                 <Phone className="h-6 w-6 text-primary mt-1" />
                                 <div>
                                     <h3 className="font-medium">Phone</h3>
-                                    <p className="text-muted-foreground">+33 6 12 34 56 78</p>
+                                    <p className="text-muted-foreground">+33 620071874</p>
                                 </div>
                             </div>
                             <div className="flex items-start space-x-4">
                                 <MapPin className="h-6 w-6 text-primary mt-1" />
                                 <div>
                                     <h3 className="font-medium">Location</h3>
-                                    <p className="text-muted-foreground">Paris, France</p>
+                                    <p className="text-muted-foreground">Longwy, France</p>
                                 </div>
                             </div>
+                        </div>
+
+                        {/* Google Map */}
+                        <div className="mt-8 rounded-xl overflow-hidden border border-border h-64">
+                            <iframe
+                                width="100%"
+                                height="100%"
+                                frameBorder="0"
+                                scrolling="no"
+                                marginHeight={0}
+                                marginWidth={0}
+                                src="https://maps.google.com/maps?q=Longwy,France&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                title="Location Map"
+                            ></iframe>
                         </div>
                     </motion.div>
 
